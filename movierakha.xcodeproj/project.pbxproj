@@ -17,6 +17,8 @@
 		C83FB83F27FC438E00F098ED /* movierakhaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83FB83E27FC438E00F098ED /* movierakhaTests.swift */; };
 		C83FB84927FC438E00F098ED /* movierakhaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83FB84827FC438E00F098ED /* movierakhaUITests.swift */; };
 		C83FB84B27FC438E00F098ED /* movierakhaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83FB84A27FC438E00F098ED /* movierakhaUITestsLaunchTests.swift */; };
+		C83FB85927FC44D200F098ED /* ApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83FB85827FC44D200F098ED /* ApiHelper.swift */; };
+		C83FB85B27FC468300F098ED /* ExtensionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83FB85A27FC468300F098ED /* ExtensionHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		C83FB84427FC438E00F098ED /* movierakhaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = movierakhaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C83FB84827FC438E00F098ED /* movierakhaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = movierakhaUITests.swift; sourceTree = "<group>"; };
 		C83FB84A27FC438E00F098ED /* movierakhaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = movierakhaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C83FB85827FC44D200F098ED /* ApiHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiHelper.swift; sourceTree = "<group>"; };
+		C83FB85A27FC468300F098ED /* ExtensionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +105,9 @@
 		C83FB82327FC438B00F098ED /* movierakha */ = {
 			isa = PBXGroup;
 			children = (
-				C83FB82427FC438B00F098ED /* AppDelegate.swift */,
-				C83FB82627FC438B00F098ED /* SceneDelegate.swift */,
-				C83FB82827FC438B00F098ED /* ViewController.swift */,
+				C83FB85D27FC47B600F098ED /* ViewController */,
+				C83FB85C27FC47A800F098ED /* Base */,
+				C83FB85727FC44AA00F098ED /* Helper */,
 				C83FB82A27FC438B00F098ED /* Main.storyboard */,
 				C83FB83027FC438D00F098ED /* Assets.xcassets */,
 				C83FB83227FC438D00F098ED /* LaunchScreen.storyboard */,
@@ -128,6 +132,32 @@
 				C83FB84A27FC438E00F098ED /* movierakhaUITestsLaunchTests.swift */,
 			);
 			path = movierakhaUITests;
+			sourceTree = "<group>";
+		};
+		C83FB85727FC44AA00F098ED /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				C83FB85827FC44D200F098ED /* ApiHelper.swift */,
+				C83FB85A27FC468300F098ED /* ExtensionHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		C83FB85C27FC47A800F098ED /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				C83FB82427FC438B00F098ED /* AppDelegate.swift */,
+				C83FB82627FC438B00F098ED /* SceneDelegate.swift */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		C83FB85D27FC47B600F098ED /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C83FB82827FC438B00F098ED /* ViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +295,8 @@
 				C83FB82527FC438B00F098ED /* AppDelegate.swift in Sources */,
 				C83FB82F27FC438B00F098ED /* movierakha.xcdatamodeld in Sources */,
 				C83FB82727FC438B00F098ED /* SceneDelegate.swift in Sources */,
+				C83FB85927FC44D200F098ED /* ApiHelper.swift in Sources */,
+				C83FB85B27FC468300F098ED /* ExtensionHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
