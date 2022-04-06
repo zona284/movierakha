@@ -103,5 +103,35 @@ class movierakhaTests: XCTestCase {
         
         XCTAssertEqual(result, expected)
     }
+    
+    func testApi_getMoviesList_success() {
+        let promise = expectation(description: "Completion handler invoked")
+        var movies: [MovieData] = []
+        
+        ApiHelper.getMoviesList(category: .popular) { result, moviesData in
+            movies.append(contentsOf: moviesData?.results ?? [])
+            promise.fulfill()
+        }
+        
+        wait(for: [promise], timeout: 5)
+
+        // then
+        XCTAssertNotNil(movies)
+    }
+    
+    func testApi_getReviews_success() {
+        let promise = expectation(description: "Completion handler invoked")
+        var reviews: [ReviewData] = []
+        
+        ApiHelper.getReviews(movieId: 634649) { result, reviewResult in
+            reviews.append(contentsOf: reviewResult?.results ?? [])
+            promise.fulfill()
+        }
+        
+        wait(for: [promise], timeout: 5)
+
+        // then
+        XCTAssertNotNil(reviews)
+    }
 
 }
