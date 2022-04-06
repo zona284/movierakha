@@ -80,7 +80,7 @@ extension String {
 extension Date {
     func convertToString(format: String) -> String {
         let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "id-ID")
+        formatter.timeZone = TimeZone.init(abbreviation: "UTC")
         formatter.dateFormat = format
         let stringDate = formatter.string(from: self)
         

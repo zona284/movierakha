@@ -82,5 +82,26 @@ class movierakhaTests: XCTestCase {
         XCTAssertEqual(resultData?.id, 634649)
         XCTAssertEqual(resultData?.results?.first?.author, "garethmb")
     }
+    
+    func testDateFormatFromString() {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm"
+        formatter.timeZone = TimeZone.init(abbreviation: "UTC")
+        let someDateTime = formatter.date(from: "2022-04-05 22:22")
+        let dateTest = "2022-04-05 22:22".toDate(format: "yyyy-MM-dd HH:mm")
+        
+        XCTAssertEqual(someDateTime, dateTest)
+    }
+    
+    func testConvertDateFormat() {
+        let stringDate = "2022-04-04T10:00:34.832Z"
+        let oldFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        let newFormat = "yyyy-MM-dd HH:mm"
+        let expected = "2022-04-04 10:00"
+        
+        let result = stringDate.toDate(format: oldFormat)?.convertToString(format: newFormat)
+        
+        XCTAssertEqual(result, expected)
+    }
 
 }
